@@ -46,6 +46,9 @@ fun main() {
     val numberWithElvis = input?.toIntOrNull() ?: 0
     println("Number of students with elvis operator: $numberWithElvis")
 
+    val floatNumber = numberWithElvis as? Float
+    println("Float number: $floatNumber")
+
     val nonNullableNumber = input!!.toInt()
     println("Non-nullable number of students: $nonNullableNumber")
 
