@@ -34,9 +34,8 @@
 
 package com.kodeco.kcf.branchcontrol
 
-fun main() {
-    println("What's the grade?")
-    val grade = readlnOrNull()?.firstOrNull()
+fun main(args: Array<String>) {
+    val grade = args.firstOrNull()?.firstOrNull()
     val messagePrefix = "Your grade is"
 
     // TODO: print the appropriate message for each grade

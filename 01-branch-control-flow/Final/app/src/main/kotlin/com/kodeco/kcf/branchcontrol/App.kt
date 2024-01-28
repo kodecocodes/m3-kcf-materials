@@ -34,9 +34,8 @@
 
 package com.kodeco.kcf.branchcontrol
 
-fun main() {
-    println("What's the grade?")
-    val grade = readlnOrNull()?.firstOrNull()
+fun main(args: Array<String>) {
+    val grade = args.firstOrNull()?.firstOrNull()
     val messagePrefix = "Your grade is"
 
     if (grade == 'A') {
@@ -45,9 +44,9 @@ fun main() {
         val messagePrefix = "You are"
         println("$messagePrefix very good")
     } else if (grade == 'C') {
-        println("$messagePrefix Good")
+        println("$messagePrefix good")
     } else if (grade == 'D') {
-        println("$messagePrefix Acceptable")
+        println("$messagePrefix acceptable")
     } else if (grade == 'F') {
         println("You failed")
     } else {
