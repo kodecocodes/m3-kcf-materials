@@ -40,6 +40,7 @@ fun main(args: Array<String>) {
 
     if (grade == 'A') {
         println("$messagePrefix excellent")
+        println("You are the best")
     } else if (grade == 'B') {
         val messagePrefix = "You are"
         println("$messagePrefix very good")
@@ -50,6 +51,6 @@ fun main(args: Array<String>) {
     } else if (grade == 'F') {
         println("You failed")
     } else {
-        println("Unrecognized grade: $grade. Valid grades are A, B, C, D, and F.")
+        System.err.println("Unrecognized grade: $grade. Valid grades are A, B, C, D, and F.")
     }
 }
