@@ -34,9 +34,22 @@
 
 package com.kodeco.kcf.whenexpressions
 
-fun main() {
+fun main(args: Array<String>) {
     println("What's the grade?")
-    val grade = readlnOrNull()?.firstOrNull()
+    val grade = args.firstOrNull()?.firstOrNull()
+    val validGrades = setOf('A', 'B', 'C', 'D', 'F')
+
+    println("Results using when without subject:")
+    val result: Unit = when {
+        grade !in validGrades -> throw IllegalArgumentException("Invalid grade")
+        grade == 'A' -> println("Your grade is excellent")
+        grade == 'B' -> println("You are very good")
+        else -> {
+            println("Your grade is lower than very good")
+            println("Keep learning and improving!")
+        }
+    }
+    println(result)
 
     println("Results using when statement:")
     when (grade) {
@@ -45,6 +58,7 @@ fun main() {
         'C' -> println("Your grade is Good")
         'D' -> println("Your grade is Acceptable")
         'F' -> println("You failed")
+        else -> System.err.println("Unrecognized grade: $grade. Valid grades are A, B, C, D, and F.")
     }
 
     println("Results using when expression:")
@@ -54,7 +68,10 @@ fun main() {
         'C' -> "Your grade is Good"
         'D' -> "Your grade is Acceptable"
         'F' -> "You failed"
-        else -> "Unrecognized grade: $grade. Valid grades are A, B, C, D, and F."
+        else -> {
+            System.err.println("Unrecognized grade: $grade. Valid grades are A, B, C, D, and F.")
+            "Your grade is unknown"
+        }
     }
     println(message)
 }
