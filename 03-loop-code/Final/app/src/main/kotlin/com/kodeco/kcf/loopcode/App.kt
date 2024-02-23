@@ -34,7 +34,7 @@
 
 package com.kodeco.kcf.loopcode
 
-fun main() {
+fun main(args: Array<String>) {
     println("For loop with range 1..3")
     for (i in 1..3) {
         println("Cleaning classroom $i...")
@@ -60,7 +60,7 @@ fun main() {
 
     println()
     println("Count of classrooms to clean:")
-    val classroomsToClean = readlnOrNull()?.toIntOrNull()
+    val classroomsToClean = args.firstOrNull()?.toIntOrNull()
         ?: throw IllegalArgumentException("Invalid input, please enter a number")
 
     val cleanedClassrooms = mutableListOf<Int>()
