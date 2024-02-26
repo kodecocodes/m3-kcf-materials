@@ -36,9 +36,9 @@ package com.kodeco.kcf.workwithnull
 
 import java.util.Arrays
 
-fun main() {
-    println("Enter a number of students:")
-    val input = readlnOrNull()
+fun main(args: Array<String>) {
+    val input = args.firstOrNull()
+    println("Number of students: $input")
 
     // TODO: extract a nullable number from input
 
@@ -48,7 +48,6 @@ fun main() {
 
     val studentsInClassrooms = Arrays.asList(10, 20, null, 25)
     println()
-    println("Enter an ordinal of classroom:")
 
     // TODO: read an ordinal from input, use ?: operator to throw an exception if input is invalid
 }

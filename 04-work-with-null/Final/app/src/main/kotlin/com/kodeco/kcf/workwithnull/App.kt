@@ -36,9 +36,9 @@ package com.kodeco.kcf.workwithnull
 
 import java.util.Arrays
 
-fun main() {
-    println("Enter a number of students:")
-    val input = readlnOrNull()
+fun main(args: Array<String>) {
+    val input = args.firstOrNull()
+    println("Number of students: $input")
 
     val nullableNumber = input?.toIntOrNull()
     println("Nullable number of students: $nullableNumber")
@@ -54,9 +54,11 @@ fun main() {
 
     val studentsInClassrooms = Arrays.asList(10, 20, null, 25)
     println()
-    println("Enter an ordinal of classroom:")
-    val ordinal = (readlnOrNull()?.toIntOrNull()
-        ?: throw IllegalArgumentException("Invalid classroom ordinal. Number expected.")) - 1
+
+    val ordinal = (nullableNumber ?: throw IllegalArgumentException("Invalid classroom ordinal. Number expected.")) - 1
+
+    println("Ordinal of classroom: $ordinal")
+
     val studentCount = studentsInClassrooms[ordinal]
     println("Count of students in classroom #$ordinal: $studentCount")
 }
