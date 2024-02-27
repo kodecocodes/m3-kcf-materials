@@ -46,19 +46,17 @@ fun main(args: Array<String>) {
     val numberWithElvis = input?.toIntOrNull() ?: 0
     println("Number of students with elvis operator: $numberWithElvis")
 
-    val floatNumber = numberWithElvis as? Float
-    println("Float number: $floatNumber")
+    val numberWithCustomException = input?.toIntOrNull()
+        ?: throw IllegalArgumentException("Invalid input, please enter a number")
+    println("Number of students with custom exception: $numberWithCustomException")
 
     val nonNullableNumber = input!!.toInt()
     println("Non-nullable number of students: $nonNullableNumber")
 
+    val safeCastNumber = nullableNumber as? Int
+    println("Safe cast number: $safeCastNumber")
+
     val studentsInClassrooms = Arrays.asList(10, 20, null, 25)
-    println()
-
-    val ordinal = (nullableNumber ?: throw IllegalArgumentException("Invalid classroom ordinal. Number expected.")) - 1
-
-    println("Ordinal of classroom: $ordinal")
-
-    val studentCount = studentsInClassrooms[ordinal]
-    println("Count of students in classroom #$ordinal: $studentCount")
+    println("Number of students in the second classroom: ${studentsInClassrooms[1]}")
+    println("Number of students in the third classroom: ${studentsInClassrooms[1]}")
 }
