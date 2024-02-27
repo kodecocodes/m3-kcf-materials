@@ -35,7 +35,6 @@
 package com.kodeco.kcf.whenexpressions
 
 fun main(args: Array<String>) {
-    println("What's the grade?")
     val grade = args.firstOrNull()?.firstOrNull()
 
     println("Results using when without subject:")
