@@ -40,18 +40,9 @@ fun main(args: Array<String>) {
     println("Results using when without subject:")
     // TODO: use when statement without subject to print the message based on the grade
 
-    println("Results using when statement:")
+    //println("Results using when statement:")
     // TODO: use when statement to print the message based on the grade
 
-    println("Results using when expression:")
+    //println("Results using when expression:")
     // TODO: use when expression to print the message based on the grade
-    val message = when (grade) {
-        'A', 'B', 'C', 'D' -> "Your passed"
-        'F' -> "You failed"
-        else -> {
-            System.err.println("Unrecognized grade: $grade. Valid grades are A, B, C, D, and F.")
-            "Your grade is unknown"
-        }
-    }
-    println(message)
 }
