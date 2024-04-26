@@ -38,38 +38,30 @@ fun main(args: Array<String>) {
     println("For loop with range 1..3")
     // TODO: Write a for loop printing "Cleaning classroom $i..." for each value of i in range
 
-    println()
     println("For loop with range 1..<3")
     // TODO: Write a for loop printing "Cleaning classroom $i..." for each value of i in range
 
-    println()
     println("For loop with range 3..1")
     // TODO: Write a for loop printing "Cleaning classroom $i..." for each value of i in range
 
-    println()
     println("For loop with range 3 downTo 1")
     // TODO: Write a for loop printing "Cleaning classroom $i..." for each value of i in range
 
-    println()
     println("Count of classrooms to clean:")
     val classroomsToClean = args.firstOrNull()?.toIntOrNull()
         ?: throw IllegalArgumentException("Invalid input, please enter a number")
 
     val cleanedClassrooms = mutableListOf<Int>()
-    println()
     println("While loop")
     // TODO: Write a while loop printing "Cleaning classroom $i..." for each classroom to clean
 
-    println()
     println("Do-while loop")
     cleanedClassrooms.clear()
     // TODO: Write a do-while loop printing "Cleaning classroom $i..." for each classroom to clean
 
-    println()
     println("Continue statement")
     // TODO: Write a for loop which skips classroom 2 cleaning
 
-    println()
     println("Break statement")
     // TODO: Write a for loop which aborts cleaning after classroom 2
 }

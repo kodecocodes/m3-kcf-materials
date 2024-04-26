@@ -40,31 +40,26 @@ fun main(args: Array<String>) {
         println("Cleaning classroom $i...")
     }
 
-    println()
     println("For loop with range 1..<3")
     for (i in 1..<3) {
         println("Cleaning classroom $i...")
     }
 
-    println()
     println("For loop with range 3..1")
     for (i in 3..1) {
         println("Cleaning classroom $i...")
     }
 
-    println()
     println("For loop with range 3 downTo 1")
     for (i in 3 downTo 1) {
         println("Cleaning classroom $i...")
     }
 
-    println()
     println("Count of classrooms to clean:")
     val classroomsToClean = args.firstOrNull()?.toIntOrNull()
         ?: throw IllegalArgumentException("Invalid input, please enter a number")
 
     val cleanedClassrooms = mutableListOf<Int>()
-    println()
     println("While loop")
     while (cleanedClassrooms.size < classroomsToClean) {
         val currentClassroom = cleanedClassrooms.size + 1
@@ -72,7 +67,6 @@ fun main(args: Array<String>) {
         cleanedClassrooms.add(currentClassroom)
     }
 
-    println()
     println("Do-while loop")
     cleanedClassrooms.clear()
     do {
@@ -81,7 +75,6 @@ fun main(args: Array<String>) {
         cleanedClassrooms.add(currentClassroom)
     } while (cleanedClassrooms.size < classroomsToClean)
 
-    println()
     println("Continue statement")
     for (currentClassroom in 1..3) {
         if (currentClassroom == 2) {
@@ -91,7 +84,6 @@ fun main(args: Array<String>) {
         println("Cleaning classroom $currentClassroom...")
     }
 
-    println()
     println("Break statement")
     for (currentClassroom in 1..3) {
         if (currentClassroom == 2) {
