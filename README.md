@@ -1,6 +1,10 @@
 # Utilize Control Flow in Kotlin: Materials
 
-This repo contains all the downloadable materials and projects associated with the **Utilize Control Flow in Kotlin** module in the **[Learn the Kotlin Language](https://www.kodeco.com/android/paths/learn-kotlin-language)**. This course is part of [Kotlin Essentials](https://www.kodeco.com/android/programs/kotlin-essentials), which you can take as on-demand bootcamp from [Kodeco](https://www.kodeco.com).
+This repo contains all the downloadable materials and projects associated with the **Utilize Control Flow in Kotlin** module in
+
+### [Learn the Kotlin Language](https://www.kodeco.com/android/paths/learn-kotlin-language)
+
+- This course is part of [Beginning Android & Kotlin Program](https://www.kodeco.com/android/programs/beginning-android), which you can take as on-demand bootcamp from [Kodeco](https://www.kodeco.com).
 
 Each edition has its own branch, named `versions/[VERSION]`. The default branch for this repo is for the most recent edition.
 
